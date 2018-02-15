@@ -2,17 +2,11 @@
   <canvas id="grafico-estoque" style="display: inline-block;"></canvas> 
 
   <table class = "table-striped table-bordered">
-    <tr>
-      <td class="coluna">{{produtos_grafico[0]}}</td>
-      <td class="coluna">{{valores_produtos_grafico[0]}}</td>
+  
+   <tr *ngFor="let produto of produtos_grafico; let i = index">
+    	<td class="coluna">{{produto}}</td>
+      <td class="coluna">{{valores_produtos_grafico[i]}}</td>
     </tr>
-    <tr>
-      <td class="coluna">{{produtos_grafico[1]}}</td>
-      <td class="coluna">{{valores_produtos_grafico[1]}}</td>
-    </tr>
-    <tr>
-      <td class="coluna">{{produtos_grafico[2]}}</td>
-      <td class="coluna">{{valores_produtos_grafico[2]}}</td>
-    </tr>
+     
   </table>
 </div>
